@@ -1,0 +1,23 @@
+{
+  "name": "json-to-json",
+  "version": "1.0.0",
+  "description": "A transformer class to transfor from json to json",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/jasmine/bin/jasmine.js"
+  },
+  "author": "Gerardo Solano",
+  "license": "MIT",
+  "devDependencies": {
+    "jasmine": "^3.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gsolano0625/json_to_json"
+  },
+  "keywords": [
+    "json",
+    "transform",
+    "node"
+  ]
+}
