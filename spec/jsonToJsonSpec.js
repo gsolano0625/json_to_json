@@ -17,38 +17,38 @@ describe('JsonTransformer', () => {
           ]
         }
       }
-    }
+    };
 
     const map = {
-      request: {
-        reference: {
-          consumerReference: {
-            isArray: true,
-            idx: 0,
-            mapsTo: (value, output) => {
+      "request": {
+        "reference": {
+          "consumerReference": {
+            "isArray": true,
+            "idx": 0,
+            "mapsTo": (value, output) => {
               switch (value.category) {
                 case 2:
-                  output["category"] = value.key;
+                  output.category = value.key;
                   break;
                 case 3:
-                  output["type"] = value.key;
+                  output.type = value.key;
                   break;
                 case 6:
-                  output["id"] = value.key;
+                  output.id = value.key;
                   break;
               }
             }
           }
         }
       }
-    }
+    };
 
     const transformer = new JsonTransformer(map, input);
-    const output = transformer.transform().output;
+    const {output} = transformer.transform();
 
     expect(output).toEqual({
-      category: "D822100",
-    })
+      "category": "D822100"
+    });
 
   });
 

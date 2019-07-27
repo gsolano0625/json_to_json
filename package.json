@@ -9,6 +9,7 @@
   "author": "Gerardo Solano",
   "license": "MIT",
   "devDependencies": {
+    "eslint": "^6.1.0",
     "jasmine": "^3.4.0"
   },
   "repository": {
