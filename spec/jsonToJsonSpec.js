@@ -7,12 +7,12 @@ describe('JsonTransformer', () => {
   it('should mapsTo functions work for complex rules ', () => {
 
     const input = {
-      "request": {
-        "reference": {
-          "consumerReference": [
+      'request': {
+        'reference': {
+          'consumerReference': [
             {
-              "category": 2,
-              "key": "D822100"
+              'category': 2,
+              'key': 'D822100'
             }
           ]
         }
@@ -20,12 +20,12 @@ describe('JsonTransformer', () => {
     };
 
     const map = {
-      "request": {
-        "reference": {
-          "consumerReference": {
-            "isArray": true,
-            "idx": 0,
-            "mapsTo": (value, output) => {
+      'request': {
+        'reference': {
+          'consumerReference': {
+            'isArray': true,
+            'idx': 0,
+            'mapsTo': (value, output) => {
               switch (value.category) {
                 case 2:
                   output.category = value.key;
@@ -44,10 +44,10 @@ describe('JsonTransformer', () => {
     };
 
     const transformer = new JsonTransformer(map, input);
-    const {output} = transformer.transform();
+    const { output } = transformer.transform();
 
     expect(output).toEqual({
-      "category": "D822100"
+      'category': 'D822100'
     });
 
   });

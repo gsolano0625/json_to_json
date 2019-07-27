@@ -19,7 +19,7 @@ class JsonTransformer {
     output = output || this.output;
 
     for (let key in config) {
-      if (key === "mapsTo") {
+      if (key === 'mapsTo') {
         continue;
       }
 
