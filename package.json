@@ -1,5 +1,5 @@
 {
-  "name": "json-to-json",
+  "name": "json_to_json_transformation",
   "version": "1.0.0",
   "description": "A transformer class to transfor from json to json",
   "main": "index.js",
